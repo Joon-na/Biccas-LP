@@ -6,8 +6,8 @@ use function Livewire\Volt\{state};
 
 ?>
 
-<nav class="container z-30 mx-auto pt-[40px] flex justify-between h-[68px] items-center mb-[70px] bg-white px-4 lg:px-0">
-    <a wire:navigate href="/" class="z-30"><img src="/images/logo-biccas.svg" alt="logo"></a>
+<nav class="container z-30 mx-auto pt-[40px] flex justify-between h-[68px] items-center mb-[70px] bg-white px-8">
+    <a wire:navigate href="/" class="z-30"><img class="w-24 md:w-full" src="/images/logo-biccas.svg" alt="logo"></a>
     
     <!-- Hamburger Icon -->
     <button id="menu-toggle" class="lg:hidden z-30 text-black focus:outline-none">

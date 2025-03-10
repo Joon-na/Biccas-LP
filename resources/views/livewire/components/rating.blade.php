@@ -6,7 +6,7 @@ use function Livewire\Volt\{state};
 
 ?>
 
-<section class="container mx-auto mt-[40px] flex flex-col md:flex-row justify-between items-center gap-10 sm:gap-20 mb-[100px] px-4">
+<section class="container mx-auto mt-[40px] flex flex-col md:flex-row justify-between items-center gap-10 sm:gap-20 mb-[100px] px-8">
     <div>
         <div class="flex flex-col gap-4 sm:gap-[30px] mb-[50px] sm:mb-[73px]">
             <h1 class="text-[30px] sm:text-[50px] font-semibold text-center md:text-left">

@@ -1,32 +1,32 @@
 <?php
 use function Livewire\Volt\{state};
 use App\Models\Contact;
+use Livewire\Volt\Component;
 
-state([
-    'email' => '',
-    'message' => '',
-    'success' => false,
-]);
+new class extends Component {
+    public $email;
+    public $message;
+    public $success;
+ 
+    function store () {
+        $this->validate([
+            'email' => 'required|email|min:6',
+            'message' => 'required',
+        ]);
 
+        Contact::create([
+            'email' => $this->email,
+            'message' => $this->message,
+        ]);
 
-$store = function () {
-    $this->validate([
-        'email' => 'required|email|min:6',
-        'message' => 'required',
-    ]);
-
-    Contact::create([
-        'email' => $this->email,
-        'message' => $this->message,
-    ]);
-
-    $this->reset(['email', 'message']);
-    $this->success = true;
-};
+        $this->reset(['email', 'message']);
+        $this->success = true;
+    }
+}
 
 ?>
 
-<section class="bg-[#161C28] py-16 px-6">
+<section class="bg-[#161C28] py-16 px-8">
     <div class="container mt-[40px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-[100px] items-center">
         <div class="text-white">
             <h1 class="text-4xl font-bold mb-[20px]">People are Saying About DoWhith</h1>
@@ -53,7 +53,7 @@ $store = function () {
             </div>
         </div>
 
-        <div class="bg-[#222938] px-24 py-6 rounded-xl text-white shadow-lg">
+        <div class="bg-[#222938] md:px-14 lg:px-24 px-12 py-6 rounded-xl text-white shadow-lg">
             <div class="flex flex-col items-center">
                 <img src="/images/get-started.svg" class="w-18">
                 <h2 class="text-[30px] font-medium mt-[10px]">Get Started</h2>
@@ -91,9 +91,8 @@ $store = function () {
     </div>
 
     <div class="bg-[#161C28] text-white">
-        <div class="mx-auto container mt-[40px] flex flex-col md:flex-row justify-between gap-[157px]">
-            
-            <div>
+        <div class="mx-auto container mt-[40px] flex flex-col md:flex-row items-center justify-center md:justify-between gap-[157px]">
+            <div class="flex justify-center flex-col items-center">
                 <img src="/images/logo-biccas.svg" alt="Biccas" class="w-24">
                 <p class="text-[#A6A6A6] mt-3">Get started now try our product</p>
                 <form class="mt-4 flex items-center border border-gray-500 rounded-full overflow-hidden w-64">
@@ -106,7 +105,6 @@ $store = function () {
             </div>
 
             <div class="flex flex-row gap-16">
-                
                 <div>
                     <h3 class="text-lg font-semibold mb-3">Support</h3>
                     <ul class="text-[#A6A6A6] space-y-2">
@@ -139,9 +137,9 @@ $store = function () {
             </div>
         </div>
 
-        <div class="container mx-auto mt-[40px] flex flex-col md:flex-row justify-between items-center">
-            <p class="text-white">© 2022 Biccas Inc. Copyright and rights reserved</p>
-            <p class="text-white">Terms and Condtions . Privacy Policy</p>
+        <div class="container mx-auto mt-[40px] flex flex-col md:flex-row justify-center md:justify-between items-center">
+            <p class="text-white text-sm">© 2022 Biccas Inc. Copyright and rights reserved</p>
+            <p class="text-white text-sm">Terms and Condtions . Privacy Policy</p>
         </div>
     </div>
 </section>

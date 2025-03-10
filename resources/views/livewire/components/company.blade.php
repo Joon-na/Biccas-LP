@@ -6,7 +6,7 @@ use function Livewire\Volt\{state};
 
 ?>
 
-<section class="container mx-auto mt-[40px] flex flex-col items-center mb-[130px] px-4">
+<section class="container mx-auto mt-[40px] flex flex-col items-center mb-[130px] px-8">
     <h1 class="font-bold text-[28px] sm:text-[40px] text-center mb-[40px]">
         More than 25,000 teams use Collabs
     </h1>

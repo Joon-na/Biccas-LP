@@ -8,7 +8,7 @@ use function Livewire\Volt\{state};
 <section class="relative">
     <img class="absolute z-[-1] top-[-600px] sm:top-[-800px] lg:top-[-1000px] right-0" src="/images/ellipse-pricing.png" alt="">
 
-    <div class="container mx-auto mt-[40px] flex flex-col justify-center items-center mb-[100px] px-4">
+    <div class="container mx-auto mt-[40px] flex flex-col justify-center items-center mb-[100px] px-8">
         <div class="flex flex-col justify-center items-center gap-[30px] sm:gap-[40px] mb-[50px] sm:mb-[67px] text-center">
             <h1 class="text-[30px] sm:text-[50px] font-bold">
                 Choose Plan That’s Right For You
